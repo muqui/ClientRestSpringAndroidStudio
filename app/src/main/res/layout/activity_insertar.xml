@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.mq12.clientrestspring.InsertarActivity">
+
+
+    <LinearLayout
+        android:layout_width="368dp"
+        android:layout_height="495dp"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp">
+
+        <EditText
+            android:id="@+id/editTextAddLocal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Local"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/editTextAddGolesLocal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Goles Local"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/editTextAddVisita"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Visita"
+            android:inputType="textPersonName" />
+
+
+        <EditText
+            android:id="@+id/editTextAddGolesVisita"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Goles Visita"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/editTextAddJornada"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Jornada"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/editTextAddEstadio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Estadio"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/editTextAddTorneo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Torneo"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/editTextAddFEcha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Fecha"
+
+            android:inputType="date"  />
+
+        <Button
+            android:id="@+id/buttonAddGuardar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Guardar" />
+
+
+
+
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>
+</ScrollView>

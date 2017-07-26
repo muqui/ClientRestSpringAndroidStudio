@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/addPartido"
+        android:orderInCategory="100"
+
+
+        android:title="Insertar partido"/>
+    <item
+        android:id="@+id/getPartido"
+        android:orderInCategory="100"
+
+        android:title="partido x ID"/>
+    <item
+        android:id="@+id/getPartidos"
+        android:orderInCategory="100"
+
+        android:title="lista partidos"/>
+
+    <item
+        android:id="@+id/borrarPartido"
+        android:orderInCategory="100"
+
+        android:icon="@android:drawable/arrow_up_float"
+        android:title="borrar partido"/>
+    <item
+        android:id="@+id/actualizarPartido"
+        android:orderInCategory="100"
+
+        android:icon="@android:drawable/arrow_down_float"
+        android:title="Actualizar Partido"/>
+
+</menu>
