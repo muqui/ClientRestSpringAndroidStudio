@@ -81,7 +81,7 @@ public class InsertarActivity extends AppCompatActivity implements View.OnClickL
                 RestTemplate restTemplate = new RestTemplate();
                 restTemplate.getMessageConverters().add(new MappingJackson2HttpMessageConverter());
 
-                String getUrl = "http://192.168.1.67:8080/partido";
+                String getUrl = "http://192.168.1.68:8080/partido";
                  Partido result = restTemplate.postForObject(getUrl, partido, Partido.class);
                 return result;
             } catch (Exception e) {
