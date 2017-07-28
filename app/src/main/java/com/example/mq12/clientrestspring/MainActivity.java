@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ExpandableListView;
 import android.widget.Toast;
 
 import org.springframework.http.HttpStatus;
@@ -16,15 +17,22 @@ import org.springframework.http.converter.json.MappingJackson2HttpMessageConvert
 import org.springframework.web.client.RestTemplate;
 
 import java.net.URI;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
-
+    private ExpandableListView listView;
+    private ExpandableListAdapter listAdapter;
+    private List<List<String>> participantes = new ArrayList<List<String>>();    // lista de participantes tugambeta.com
+    private List<String> encabezado = new ArrayList<>();
+    private HashMap<String, List<String>> listHash;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        listView = (ExpandableListView) findViewById(R.id.lvExp);
         super.onStart();
         new MainActivity.HttpRequestTask(this).execute();
     }
@@ -75,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         protected  List<Partido> doInBackground(Void... params) {
-
+            listHash = new HashMap<>();
             try {
 
                 RestTemplate restTemplate = new RestTemplate();
@@ -96,6 +104,24 @@ public class MainActivity extends AppCompatActivity {
         @Override
         protected void onPostExecute(  List<Partido> partidos) {
            Log.d("pardido " + partidos, "resul");
+
+            for(Partido p : partidos){
+                List<String> datos = new ArrayList<>();
+
+                  encabezado.add(p.getId().toString());
+                datos.add(p.getLocal());
+                datos.add(""+p.getGoleslocal());
+                datos.add(""+p.getVisita());
+                datos.add(""+p.getGolesvista());
+                datos.add(""+p.getEstadio());
+                participantes.add(datos);
+            }
+            for (int i = 0; i < encabezado.size(); i++) {
+                listHash.put(encabezado.get(i), participantes.get(0)); // se llena el listHast de participantes. encabezado y participantes deben tener el mismo tamaño
+
+            }
+            listAdapter = new ExpandableListAdapter(mContext, encabezado, listHash);
+            listView.setAdapter(listAdapter);
             Toast toast= Toast.makeText(mContext, "Partido insetado: " + partidos.get(0).getId(), Toast.LENGTH_LONG);
             toast.show();
 
