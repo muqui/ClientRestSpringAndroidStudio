@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.mq12.clientrestspring">
+
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -17,10 +18,23 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity android:name=".InsertarActivity">
             <intent-filter>
                 <action android:name="android.intent.action.INSERTARACTIVIDAD" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".BorrarActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.BORRARACTIVIDAD" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".EditarActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.EDITARACTIVIDAD" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>

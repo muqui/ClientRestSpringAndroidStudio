@@ -5,6 +5,7 @@ package com.example.mq12.clientrestspring;
  */
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -67,7 +68,7 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
 
     @Override
     public View getGroupView(final int groupPosition, boolean isExpanded, View convertView, ViewGroup parent) {
-        String headerTitle = (String) getGroup(groupPosition);
+        final String headerTitle = (String) getGroup(groupPosition);
 
 
 
@@ -87,7 +88,10 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
             @Override
             public void onClick(View view) {
                 Log.d("string Editar" + groupPosition, "pray002121");
-
+                Intent intent  = new Intent(context, EditarActivity.class);
+                String dato = lbListHeader.getText().toString();
+                intent.putExtra("id", headerTitle);
+                context.startActivity(intent);
                 Toast.makeText(context, "Presionaste boton Editar: " + groupPosition , Toast.LENGTH_SHORT).show();
             }
         });
@@ -95,8 +99,12 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
             @Override
             public void onClick(View view) {
                 Log.d("string Borrar" + groupPosition, "pray002121");
+                Intent intent  = new Intent(context, BorrarActivity.class);
+                String dato = lbListHeader.getText().toString();
+                intent.putExtra("id", headerTitle);
+               context.startActivity(intent);
 
-                Toast.makeText(context, "Presionaste boton Borrar: " + groupPosition , Toast.LENGTH_SHORT).show();
+               // Toast.makeText(context, "Presionaste boton Borrar: " + groupPosition , Toast.LENGTH_SHORT).show();
             }
         });
         lbListHeader .setTypeface(null, Typeface.BOLD);

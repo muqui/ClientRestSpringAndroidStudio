@@ -49,22 +49,11 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()){
             case R.id.addPartido:
-                Toast.makeText(getApplicationContext(), "add...", Toast.LENGTH_SHORT).show();
+               // Toast.makeText(getApplicationContext(), "add...", Toast.LENGTH_SHORT).show();
                 Intent intent  = new Intent(this, InsertarActivity.class);
                 startActivity(intent);
                 break;
-            case R.id.getPartido:
-                Toast.makeText(getApplicationContext(), "get partido...", Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.getPartidos:
-                Toast.makeText(getApplicationContext(), "getPartidos...", Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.actualizarPartido:
-                Toast.makeText(getApplicationContext(), "update...", Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.borrarPartido:
-                Toast.makeText(getApplicationContext(), "delete...", Toast.LENGTH_SHORT).show();
-                break;
+
             default:
 
         }
@@ -109,11 +98,12 @@ public class MainActivity extends AppCompatActivity {
                 List<String> datos = new ArrayList<>();
 
                   encabezado.add(p.getId().toString());
-                datos.add(p.getLocal());
-                datos.add(""+p.getGoleslocal());
-                datos.add(""+p.getVisita());
-                datos.add(""+p.getGolesvista());
-                datos.add(""+p.getEstadio());
+                datos.add(p.getLocal() + " " +p.getGoleslocal() + " - " +p.getGolesvista() + " " + p.getVisita());
+
+                datos.add("Estadio "+p.getEstadio());
+                datos.add("Fecha " +p.getFecha());
+                datos.add("Jornada " + p.getJornada());
+                datos.add("Torneo " + p.getTorneo());
                 participantes.add(datos);
             }
             for (int i = 0; i < encabezado.size(); i++) {

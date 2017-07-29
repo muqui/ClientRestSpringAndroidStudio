@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.example.mq12.clientrestspring.EditarActivity">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="495dp"
+            android:orientation="vertical"
+            android:weightSum="1"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="170dp">
+
+            <TextView
+                android:id="@+id/textViewEditarID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.17"
+                android:text="Editar" />
+
+            <EditText
+                android:id="@+id/editTextEditarLocal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Local"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/editTextEditarGolesLocal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Goles Local"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/editTextEditarVisita"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Visita"
+                android:inputType="textPersonName" />
+
+
+            <EditText
+                android:id="@+id/editTextEditarGolesVisita"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Goles Visita"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/editTextEditarJornada"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Jornada"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/editTextEditarEstadio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Estadio"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/editTextEditarTorneo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Torneo"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/editTextEditarFEcha"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Fecha"
+
+                android:inputType="date" />
+
+            <Button
+                android:id="@+id/buttonEditarGuardar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Editar" />
+
+
+        </LinearLayout>
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>
