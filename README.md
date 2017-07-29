@@ -22,4 +22,4 @@ borrar partido
 Observaciones:
 <br>
 El codigo anterior debe ir dentro de un hilo AsyncTask
-color.Red("We have red")
+
