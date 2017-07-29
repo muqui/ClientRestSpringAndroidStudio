@@ -1,16 +1,11 @@
 # ClientRestSpringAndroidStudio
-Mi Tarjeta de Credito
 <br>
-
-Controla tu tarjeta de credito llevando un registro de tus gastos y pagos.
-<br>
-![alt text](https://github.com/muqui/My-credit-card/blob/master/src/screenshot/Movimientos.png)
-<br>
-Gasto
-<br>
-![alt text](https://github.com/muqui/My-credit-card/blob/master/src/screenshot/Gasto.png)
-<br>
-Pago
-<br>
-![alt text](https://github.com/muqui/My-credit-card/blob/master/src/screenshot/Pago.png)
-
+![alt text](https://github.com/muqui/ClientRestSpringAndroidStudio/blob/master/gradle.png)
+<p> lista de partidos </p>
+![alt text](https://github.com/muqui/ClientRestSpringAndroidStudio/blob/master/list.png)
+<p> Alta partido </p>
+![alt text](https://github.com/muqui/ClientRestSpringAndroidStudio/blob/master/insertar.png)
+<p>editar partido</p>
+![alt text](https://github.com/muqui/ClientRestSpringAndroidStudio/blob/master/editar.png)
+<p>borrar partido</p>
+![alt text](https://github.com/muqui/ClientRestSpringAndroidStudio/blob/master/borrar.png)
