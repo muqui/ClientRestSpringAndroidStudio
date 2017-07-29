@@ -22,4 +22,4 @@ borrar partido
 Observaciones:
 <br>
 El codigo anterior debe ir dentro de un hilo AsyncTask
-![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `#f03c15`
+![#f03c15](https://placehold.it/15/f03c15/000000?text=+ccxcxcxcx) 
