@@ -1,5 +1,5 @@
 # Client Rest Spring - AndroidStudio 2.3.1
-archivo
+modificaciones archivo build.gradle
 <br>
 ![alt text](https://github.com/muqui/ClientRestSpringAndroidStudio/blob/master/gradle.png)
 <br>
@@ -18,3 +18,7 @@ editar partido
 borrar partido
 <br>
 ![alt text](https://github.com/muqui/ClientRestSpringAndroidStudio/blob/master/borrar.png)
+<br>
+Observaciones:
+<br>
+El codigo anterior debe ir dentro de un hilo AsyncTask
