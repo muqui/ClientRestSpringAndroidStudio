@@ -19,7 +19,7 @@ public class EditarActivity extends AppCompatActivity implements View.OnClickLis
     Button boton;
     TextView textViewId;
     EditText editTextLocal, editTextGolesLocal, editTextVisita, editTextGolesVisita, editTextEstadio, editTextFecha, editTextJornada, editTextTorneo;
-    String cadena = "";
+    String id = "";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,8 +38,8 @@ public class EditarActivity extends AppCompatActivity implements View.OnClickLis
         Intent intent = getIntent();
         Bundle bundle = intent.getExtras();
         if (bundle !=  null){
-            cadena = (String)bundle.get("id");
-            textViewId.setText("Editar  el partido  con ID " +cadena);
+            id = (String)bundle.get("id");
+            textViewId.setText("Editar  el partido  con ID " +id);
         }
     }
 
@@ -86,7 +86,7 @@ public class EditarActivity extends AppCompatActivity implements View.OnClickLis
                editar();
                 RestTemplate restTemplate = new RestTemplate();
                 restTemplate.getMessageConverters().add(new MappingJackson2HttpMessageConverter());
-                String getUrl = "http://192.168.1.68:8080/partido/" +cadena;
+                String getUrl = "http://192.168.1.68:8080/partido/" +id;
                 restTemplate.put(getUrl, partido);
                 return partido;
             } catch (Exception e) {
